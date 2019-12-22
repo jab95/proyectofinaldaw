@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+    Quien quiere ser millonario
+</mat-toolbar>
+
+
+<div class="container">
+    <main>
+        <div class="row mt-5">
+            <div class="col"></div>
+            <div class="col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+                <img alt="Angular Logo" class="img-fluid" src="../../../assets/logo3.png">
+            </div>
+            <div class="col"></div>
+
+        </div>
+
+        <div class="row ">
+            <div class="col"></div>
+
+            <div class="col-10 col-sm-10 col-md-8 col-lg-6 col-xl-6">
+                <a class="btn btn-lg btn-primary btn-block mt-3" id="entrar" data-target="inicio">Entrar como
+                    invitado</a>
+                <a class="btn btn-lg btn-primary btn-block mt-3" id="login" (click)="accederAdmin()"
+                    data-target="inicio">Entrar
+                    como administrador</a>
+
+                <ng-container *ngIf="acceder">
+                    <a class="btn btn-lg btn-primary  mt-3" id="entrar" data-target="inicio">Acceder</a>
+                    <a class="btn btn-lg btn-primary ml-3  mt-3" id="entrar" data-target="inicio">Registrar</a>
+
+                </ng-container>
+            </div>
+            <div class="col"></div>
+
+        </div>
+
+    </main>
+</div>
