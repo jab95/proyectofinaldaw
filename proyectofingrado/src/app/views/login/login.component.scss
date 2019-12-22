@@ -1,8 +1,211 @@
 main {
     width: 100%;
     text-align: center;
-    margin: 0 auto;
-     
+
     
 }
 
+body {
+    text-align: center;
+  }
+  
+  a {
+    position: relative;
+    width: 100%;
+    padding-top: 25.92%;
+    display: block;
+    background-size: 100% 100%;
+    font-family: 'luckiest guy';
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a.background-button {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-shadow.png);
+    font-size: 28px;
+
+    &:after {
+      content: attr(title);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-top.png);
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &:hover:after {
+      -webkit-transform: translate(2.5%, 10%);
+      transform: translate(2.5%, 10%);
+      text-shadow: 2px 2px 1px white;
+      color: black;
+    }
+  }
+
+  
+  a.background-button2 {
+    font-size: 15px;
+
+    &:after {
+      content: attr(title);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/323909/yellow-top.png);
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &:hover:after {
+      -webkit-transform: translate(2.5%, 10%);
+      transform: translate(2.5%, 10%);
+      text-shadow: 2px 2px 1px white;
+      color: black;
+    }
+  }
+  
+  
+  .button-wrapper {
+    width: 355px;
+    display: inline-block;
+  
+    &:nth-child(2) a {
+      -webkit-filter: hue-rotate(36deg);
+      filter: hue-rotate(36deg);
+    }
+    &:nth-child(3) a {
+      -webkit-filter: hue-rotate(72deg);
+      filter: hue-rotate(72deg);
+    }
+    &:nth-child(4) {
+      -webkit-filter: hue-rotate(108deg);
+      filter: hue-rotate(108deg);
+    }
+    &:nth-child(5) {
+      -webkit-filter: hue-rotate(144deg);
+      filter: hue-rotate(144deg);
+    }
+    &:nth-child(6) {
+      -webkit-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+    }
+    &:nth-child(7) {
+      -webkit-filter: hue-rotate(216deg);
+      filter: hue-rotate(216deg);
+    }
+    &:nth-child(8) {
+      -webkit-filter: hue-rotate(216deg);
+      filter: hue-rotate(216deg);
+    }
+  
+    &:nth-child(9) {
+      -webkit-filter: hue-rotate(252deg);
+      filter: hue-rotate(252deg);
+    }
+  
+    &:nth-child(7) {
+      -webkit-filter: hue-rotate(288deg);
+      filter: hue-rotate(288deg);
+    }
+  
+    &:nth-child(8) {
+      -webkit-filter: hue-rotate(324deg);
+      filter: hue-rotate(324deg);
+    }
+  }
+  
+  
+  .button-wrapper2 {
+    width: 100px;
+    display: inline-block;
+  
+    &:nth-child(2) a {
+      -webkit-filter: hue-rotate(36deg);
+      filter: hue-rotate(36deg);
+    }
+    &:nth-child(3) a {
+      -webkit-filter: hue-rotate(72deg);
+      filter: hue-rotate(72deg);
+    }
+    &:nth-child(4) {
+      -webkit-filter: hue-rotate(108deg);
+      filter: hue-rotate(108deg);
+    }
+    &:nth-child(5) {
+      -webkit-filter: hue-rotate(144deg);
+      filter: hue-rotate(144deg);
+    }
+    &:nth-child(6) {
+      -webkit-filter: hue-rotate(180deg);
+      filter: hue-rotate(180deg);
+    }
+    &:nth-child(7) {
+      -webkit-filter: hue-rotate(216deg);
+      filter: hue-rotate(216deg);
+    }
+    &:nth-child(8) {
+      -webkit-filter: hue-rotate(216deg);
+      filter: hue-rotate(216deg);
+    }
+  
+    &:nth-child(9) {
+      -webkit-filter: hue-rotate(252deg);
+      filter: hue-rotate(252deg);
+    }
+  
+    &:nth-child(7) {
+      -webkit-filter: hue-rotate(288deg);
+      filter: hue-rotate(288deg);
+    }
+  
+    &:nth-child(8) {
+      -webkit-filter: hue-rotate(324deg);
+      filter: hue-rotate(324deg);
+    }
+  }
+  
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+     
+  .button-wrapper2 {
+    width: 300px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .button-wrapper2 {
+        width: 150px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .button-wrapper2 {
+        width: 150px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .button-wrapper2 {
+        width: 150px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .button-wrapper2 {
+        width: 150px;
+    }
+}
