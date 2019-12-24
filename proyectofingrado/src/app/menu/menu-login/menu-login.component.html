@@ -1,0 +1,50 @@
+<div class="container pt-5">
+
+    <main>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6" id="img-logo">
+                <img alt="Angular Logo" width="400" class="img-fluid" src="../../../assets/imagenes/logo3.png">
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row justify-content-center ">
+
+            <div class="col-10 ">
+
+                <div class="fuller-button" (mouseenter)="sonarHover()" (click)="sonarClick()">Acceder como invitado
+                </div>
+                <div class="fuller-button" (mouseenter)="sonarHover()" (click)="accederAdmin()">Acceder como admin</div>
+
+            </div>
+
+        </div>
+        <ng-container *ngIf="acceder">
+            <div class="row justify-content-center ">
+
+                <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-4">
+
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="login()">Iniciar sesion</div>
+
+                </div>
+                <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-4">
+
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="sonarClick()" #btn>Registrarse</div>
+
+                </div>
+
+            </div>
+        </ng-container>
+
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+    <source src="../../../assets/sonidos/music1.ogg" type="audio/ogg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

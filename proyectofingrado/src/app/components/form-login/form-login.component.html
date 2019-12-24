@@ -1,0 +1,29 @@
+<main>
+    <div id="cab">
+        <h1 mat-dialog-title>Iniciar sesión</h1>
+    </div>
+    <div mat-dialog-content>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <input type="text" name="" class="mt-1 btn-block" id="" placeholder="Usuario">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="password" name="" class="mt-1  btn-block" id="" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="sonarClick()">Acceder
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

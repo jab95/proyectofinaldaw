@@ -15,6 +15,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MenuLoginComponent } from './menu/menu-login/menu-login.component';
+import { FormLoginComponent } from './components/form-login/form-login.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -27,7 +31,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     PuntuacionesComponent,
     HerramientasComponent,
     AboutComponent,
-    AdministracionComponent
+    AdministracionComponent,
+    MenuLoginComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,9 +41,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDialogModule,
+    MatFormFieldModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [FormLoginComponent]
 })
 export class AppModule { }

@@ -8,19 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
 
-  private acceder: boolean;
-
   constructor() {
+
   }
 
   ngOnInit() {
-    this.acceder = false;
 
   }
 
-
-  accederAdmin() {
-    this.acceder = !this.acceder;
-  }
 
 }
