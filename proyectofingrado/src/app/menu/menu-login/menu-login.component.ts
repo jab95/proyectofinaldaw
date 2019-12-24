@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormLoginComponent } from 'src/app/components/form-login/form-login.component';
+import { FormRegistroComponent } from 'src/app/components/form-registro/form-registro.component';
 @Component({
   selector: 'app-menu-login',
   templateUrl: './menu-login.component.html',
@@ -46,10 +47,17 @@ export class MenuLoginComponent implements OnInit, AfterViewInit {
     this.sonarClick();
   }
 
-  login(): void {
+  login() {
 
     this.sonarClick();
     this.dialog.open(FormLoginComponent, { panelClass: 'custom-dialog-container' });
+
+  }
+
+  registrar() {
+
+    this.sonarClick();
+    this.dialog.open(FormRegistroComponent, { panelClass: 'custom-dialog-container' });
 
   }
 

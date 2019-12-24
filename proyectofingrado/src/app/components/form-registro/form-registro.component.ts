@@ -1,11 +1,11 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'app-form-login',
-  templateUrl: './form-login.component.html',
-  styleUrls: ['../../app.component.scss', './form-login.component.scss']
+  selector: 'app-form-registro',
+  templateUrl: './form-registro.component.html',
+  styleUrls: ['../../app.component.scss', './form-registro.component.scss']
 })
-export class FormLoginComponent implements OnInit, AfterViewInit {
+export class FormRegistroComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.hover.nativeElement.volume = "0.2";
   }

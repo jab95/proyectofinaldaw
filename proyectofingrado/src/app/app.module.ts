@@ -19,6 +19,7 @@ import { MenuLoginComponent } from './menu/menu-login/menu-login.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormRegistroComponent } from './components/form-registro/form-registro.component';
 
 
 
@@ -33,7 +34,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AboutComponent,
     AdministracionComponent,
     MenuLoginComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    FormRegistroComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [FormLoginComponent]
+  entryComponents: [FormLoginComponent, FormRegistroComponent]
 })
 export class AppModule { }
