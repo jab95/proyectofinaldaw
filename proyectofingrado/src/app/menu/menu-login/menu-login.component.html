@@ -12,14 +12,15 @@
 
             <div class="col-10 ">
 
-                <div class="fuller-button" (mouseenter)="sonarHover()" (click)="sonarClick()">Acceder</div>
+                <div class="fuller-button" (mouseenter)="sonarHover()" (click)="accederInvitado()" routerLink="/home">
+                    Acceder</div>
                 <div class="fuller-button" (mouseenter)="sonarHover()" (click)="accederAdmin()">Acceder como admin</div>
 
             </div>
 
         </div>
-        <ng-container *ngIf="acceder">
-            <div class="row justify-content-center mb-3">
+        <ng-container *ngIf="accedeAdmin">
+            <div class="row justify-content-center mb-3 acceder">
 
                 <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-4">
 

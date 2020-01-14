@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angula
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { FormLoginComponent } from 'src/app/components/form-login/form-login.component';
 import { FormRegistroComponent } from 'src/app/components/form-registro/form-registro.component';
+import { DataService } from '../../services/data/data.service';
+
 @Component({
   selector: 'app-menu-login',
   templateUrl: './menu-login.component.html',
@@ -19,14 +21,17 @@ export class MenuLoginComponent implements OnInit, AfterViewInit {
   }
 
 
-  acceder: boolean;
+  accedeAdmin: boolean;
 
-  constructor(public dialog: MatDialog) {
+  constructor(
+    public dialog: MatDialog,
+    public dataservice: DataService,
+  ) {
 
   }
 
   ngOnInit() {
-    this.acceder = false;
+    this.accedeAdmin = false;
 
   }
 
@@ -42,8 +47,15 @@ export class MenuLoginComponent implements OnInit, AfterViewInit {
   }
 
 
+  accederInvitado() {
+    this.sonarClick();
+    this.dataservice.esInvitado = true;
+
+
+  }
+
   accederAdmin() {
-    this.acceder = !this.acceder;
+    this.accedeAdmin = !this.accedeAdmin;
     this.sonarClick();
   }
 

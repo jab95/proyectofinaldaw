@@ -5,22 +5,25 @@
     <div mat-dialog-content>
         <div class="container">
 
-            <form class="form-horizontal">
+            <form [formGroup]="registerForm" class="form-horizontal">
                 <div class="form-group">
 
                     <input type="text" name="" class="mt-1 form-control" id="" placeholder="Usuario">
                 </div>
                 <div class="form-group">
 
-                    <input type="password" name="" class="mt-1 form-control " id="" placeholder="Contraseña">
+                    <input type="password" formControlName="password" name="password" class="mt-1 form-control " id=""
+                        placeholder="Contraseña">
                 </div>
                 <div class="form-group">
 
-                    <input type="text" name="" class="mt-1 form-control " id="" placeholder="Email">
+                    <input type="text" formControlName="email" name="email" class="mt-1 form-control " id=""
+                        placeholder="Email">
                 </div>
 
                 <div class="form-group">
-                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="sonarClick()">Registrar
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="registro(registerForm.value)">
+                        Registrar
                     </div>
                 </div>
 

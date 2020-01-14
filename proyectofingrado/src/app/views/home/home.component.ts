@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { DataService } from '../../services/data/data.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  @Input() name: string
+  desactivado: boolean;
+
+  constructor(public dataservice: DataService) { }
+
+
 
   ngOnInit() {
+    this.desactivado = this.dataservice.esInvitado;
   }
+
+  btnDesac() {
+  }
+
+
 
 }
