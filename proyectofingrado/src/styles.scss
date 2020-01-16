@@ -27,11 +27,28 @@ body {
 }
 
 
+@media only screen and (max-width: 390px) {
+
+  .fuller-button{
+  font-size: 0.85em;
+  }
+
+}
+
+@media only screen and (max-width: 414px) {
+
+  
+.vista{
+  padding-top: 3rem;
+}
+
+
+}
 
 
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
    
   
 .custom-dialog-container .mat-dialog-container {
@@ -42,8 +59,16 @@ body {
   /* add your styles */
 }
 
+#img-logo{
+  display: none;
+}
+
+
+
 
 }
+
+
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
@@ -53,7 +78,12 @@ body {
 
     /* add your styles */
   }
-  
+
+
+
+  .nuevo-btn-salir{
+    display: block;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -64,7 +94,10 @@ body {
 
     /* add your styles */
   }
-  
+  .nuevo-btn-salir{
+    display: none;
+  }
+
  
 }
 
@@ -76,8 +109,15 @@ body {
 
     /* add your styles */
   }
+
+  .fuller-button{
+    font-size: 0.85em;
+    }
   
- 
+  .nuevo-btn-salir{
+    display: none;
+  }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -89,8 +129,13 @@ body {
 
     /* add your styles */
   }
-  
+  .nuevo-btn-salir{
+    display: none;
+  }
+
  
+
+  
 }
 
 @keyframes fadein {

@@ -1,1 +1,8 @@
-1º entrega seria hasta rama ee9fe2fc0bd7292c39a88d06ea0f1c4f5f6837eb con formularios de registro y login creados
+
+primera entrega hasta rama 961825530c3bc64241ee6d962e4a55f08d57059a
+
+con formularios de registro y login creados 
+
+
+usado angularfire para el login y registro, 
+tambien se usa https://github.com/scttcper/ngx-toastr como alertas para la app

@@ -4,23 +4,6 @@
     font-family: "fuentegame";
     
 
-     .fuller-button {
-      color: black;
-      background: none;
-      border-radius: 0;
-      padding: 1.2em 0.8em;
-      letter-spacing: 0.25em;
-      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-      box-shadow: inset 0 0 0.5em #3C4473, 0 0 0.5em #3C4473;
-      border: #3C4473 solid 2px;
-      margin-top: 1em;
-   
-      &:hover {
-        background-color: rgb(198, 216, 239);//#A2F2EA;
-        box-shadow: inset 0 0 0 #3C4473, 0 0 1.5em #3C4473;
-        cursor: pointer;
-      }
-    }
 
   }
   
@@ -40,7 +23,7 @@
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .fuller-button{
-      font-size: 1.1em;
+      font-size: 1em;
     
     }
    
@@ -49,7 +32,7 @@
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .fuller-button{
-      font-size: 1.2em;
+      font-size: 1.1em;
     
     }
    
@@ -58,7 +41,7 @@
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .fuller-button{
-      font-size: 1.3em;
+      font-size: 1.2em;
     
     }
    
@@ -68,7 +51,7 @@
   @media only screen and (min-width: 1200px) {
     
     .fuller-button{
-      font-size: 1.4em;
+      font-size: 1.3em;
     
     }
    
