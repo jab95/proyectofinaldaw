@@ -20,50 +20,55 @@
 
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div id="template-botones">
+            <div class="row justify-content-center ">
 
-            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-5 ">
+                <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-5 ">
 
-                <div class="fuller-button" routerLink="/juego" (mouseenter)="sonarHover()" (click)="sonarClick()"> Jugar
+                    <div class="fuller-button" routerLink="/juego" (mouseenter)="sonarHover()" (click)="sonarClick()">
+                        Jugar
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <div class="row justify-content-center mb-3">
+                <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
 
-        <div class="row justify-content-center mb-3">
-            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
-
-                <div [className]="invitado ? 'fuller-button2' : 'fuller-button'" (mouseenter)="sonarHover()"
-                    (click)="AccederAdministracion()">Administración</div>
+                    <div [className]="invitado ? 'fuller-button2' : 'fuller-button'" (mouseenter)="sonarHover()"
+                        (click)="AccederAdministracion()">Administración</div>
 
 
-            </div>
-            <div class=" col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
-                <div class="fuller-button">Ranking</div>
-
-
-            </div>
-            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
-                <div class="fuller-button">Ajustes</div>
-
-
-            </div>
-            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
-                <div class="fuller-button">Acerca de</div>
-
-
-            </div>
-            <div class="col-8 nuevo-btn-salir d-sm-none ">
-                <div class="fuller-button btn-salir" routerLink="/login" (mouseenter)="sonarHover()"
+                </div>
+                <div class=" col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()"
                     (click)="sonarClick()">
-                    <i class="fas fa-sign-out-alt fa-2x"></i>
+                    <div class="fuller-button">Ranking</div>
+
 
                 </div>
+                <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()"
+                    (click)="sonarClick()">
+                    <div class="fuller-button">Ajustes</div>
 
+
+                </div>
+                <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()"
+                    (click)="sonarClick()">
+                    <div class="fuller-button">Acerca de</div>
+
+
+                </div>
+                <div class="col-8 nuevo-btn-salir d-sm-none ">
+                    <div class="fuller-button btn-salir" routerLink="/login" (mouseenter)="sonarHover()"
+                        (click)="sonarClick()">
+                        <i class="fas fa-sign-out-alt fa-2x"></i>
+
+                    </div>
+
+                </div>
             </div>
         </div>
-
     </main>
 </div>
 

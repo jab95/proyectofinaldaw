@@ -45,6 +45,14 @@ font-size: 0.7em;
 
 }
 
+@media only screen and (max-height: 740px),screen and (max-width: 575px) {
+  #template-botones{
+    margin-top: 2rem;
+  }
+  
+  
+}
+
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -58,7 +66,9 @@ font-size: 0.7em;
 
   /* add your styles */
 }
-
+#img-logo{
+  display: none;
+}
 
 .vista{
   padding-top: 3rem;
@@ -70,9 +80,9 @@ font-size: 0.7em;
 // }
 
 
-#logo{
-  width: 60%;
-}
+// #logo{
+//   width: 60%;
+// }
 
 // .columna2,.columna3{
 //   display: none;
@@ -92,11 +102,13 @@ font-size: 0.7em;
 
     /* add your styles */
   }
-  
+
  
   .nuevo-btn-salir{
     display: block;
   }
+
+
 }
 
 
@@ -113,7 +125,12 @@ font-size: 0.7em;
     display: none;
   }
 
- 
+  
+  #img-logo{
+    display: block;
+  }
+
+  
  
  
  
