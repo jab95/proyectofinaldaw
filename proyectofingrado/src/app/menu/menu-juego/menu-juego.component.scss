@@ -1,0 +1,58 @@
+main{
+
+font-family: "fuentegame";
+font-size: 1.25em;
+width: 100%;
+height: 100%;
+text-align: center;
+
+
+.fuller-button{
+
+    text-align: center;
+    color: black;
+    background: none;
+    border-radius: 0;
+    padding: 0.8em ;
+    letter-spacing: 0.15em;
+    transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+    box-shadow: inset 0 0 1em #3C4473, 0 0 1em #3C4473;
+    border: #3C4473 solid 2px;
+    margin-top: 1em;
+  
+
+    &:hover {
+      background-color: rgb(198, 216, 239);//#A2F2EA;
+      box-shadow: inset 0 0 0 #3C4473, 0 0 1.5em #3C4473;
+      cursor: pointer;
+    }
+
+}
+
+.fuller-button2{
+
+  text-align: center;
+  color: black;
+  background: #dddddd;
+  border-radius: 0;
+  padding: 0.8em ;
+  letter-spacing: 0.15em;
+  margin-top: 1em;
+  border: #3C4473 solid 2px;
+
+  &:hover {
+ 
+    cursor: pointer;
+  }
+}
+
+#logo{
+  width: 75vh;
+}
+
+.btn-salir{
+        padding: 0.4em 0.4em;
+  
+}
+    
+}

@@ -1,0 +1,78 @@
+<div class="container pt-3 ">
+
+    <main class="vista">
+        <div class="row">
+            <div class="col-12">
+                <h2>¿Quieres ser millonario?</h2>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col "> </div>
+            <div class=" col-8  col-sm-8 col-md-7 col-lg-7 col-xl-7" id="img-logo">
+                <img alt="Angular Logo" id="logo" class="img-fluid" src="../../../assets/imagenes/logo3.png">
+            </div>
+            <div class="col">
+                <div class="d-none d-sm-block fuller-button btn-salir col-salir" (mouseenter)="sonarHover()"
+                    (click)="sonarClick()" routerLink="/login"> <i class="fas fa-sign-out-alt fa-2x"></i>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-5 ">
+
+                <div class="fuller-button" routerLink="/juego" (mouseenter)="sonarHover()" (click)="sonarClick()"> Jugar
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mb-3">
+            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
+
+                <div [className]="invitado ? 'fuller-button2' : 'fuller-button'" (mouseenter)="sonarHover()"
+                    (click)="AccederAdministracion()">Administración</div>
+
+
+            </div>
+            <div class=" col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
+                <div class="fuller-button">Ranking</div>
+
+
+            </div>
+            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
+                <div class="fuller-button">Ajustes</div>
+
+
+            </div>
+            <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()" (click)="sonarClick()">
+                <div class="fuller-button">Acerca de</div>
+
+
+            </div>
+            <div class="col-8 nuevo-btn-salir d-sm-none ">
+                <div class="fuller-button btn-salir" routerLink="/login" (mouseenter)="sonarHover()"
+                    (click)="sonarClick()">
+                    <i class="fas fa-sign-out-alt fa-2x"></i>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+    <source src="../../../assets/sonidos/music1.ogg" type="audio/ogg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

@@ -12,7 +12,7 @@
 html, body { height: 100%;  }
 body { 
     background: rgb(13,13,13);
-    background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(196,199,242,1) 0%, rgba(60,68,115,1) 100%);
+    background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(196,199,242,1) 0%, rgba(60,68,115,1) 110%);
    
     ;margin: 0 auto;
     // font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -29,17 +29,17 @@ body {
 
 @media only screen and (max-width: 390px) {
 
-  .fuller-button{
-  font-size: 0.85em;
+  .fuller-button, .fuller-button2{
+    font-size: 0.85em;
   }
+
 
 }
 
 @media only screen and (max-width: 414px) {
 
-  
-.vista{
-  padding-top: 3rem;
+.fuller-button, .fuller-button2{
+font-size: 0.7em;
 }
 
 
@@ -59,14 +59,28 @@ body {
   /* add your styles */
 }
 
-#img-logo{
-  display: none;
+
+.vista{
+  padding-top: 3rem;
 }
 
 
+// #img-logo{
+//   display: none;
+// }
+
+
+#logo{
+  width: 60%;
+}
+
+// .columna2,.columna3{
+//   display: none;
+// }
 
 
 }
+
 
 
 
@@ -78,13 +92,14 @@ body {
 
     /* add your styles */
   }
-
-
-
+  
+ 
   .nuevo-btn-salir{
     display: block;
   }
 }
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -99,6 +114,24 @@ body {
   }
 
  
+ 
+ 
+ 
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+  .row1{
+    display: none;
+
+  }
+
+  .row2{
+    display: block;
+  }
+
+ 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -110,13 +143,19 @@ body {
     /* add your styles */
   }
 
-  .fuller-button{
+  .fuller-button, .fuller-button2{
     font-size: 0.85em;
     }
   
   .nuevo-btn-salir{
     display: none;
   }
+
+  
+  .row2{
+    display: none;
+  }
+
 
 }
 
@@ -132,6 +171,7 @@ body {
   .nuevo-btn-salir{
     display: none;
   }
+
   
 }
 
@@ -140,8 +180,10 @@ body {
   #logo{
     width: 60vh;
   }
-
-  
+ 
+ 
+ 
+ 
 
 }
 

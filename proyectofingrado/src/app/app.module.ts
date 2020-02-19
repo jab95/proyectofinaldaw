@@ -21,7 +21,7 @@ import { FormLoginComponent } from './components/form-login/form-login.component
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormRegistroComponent } from './components/form-registro/form-registro.component';
-// import { MenuJuegoComponent } from './menu/menu-juego/menu-juego.component';
+import { MenuJuegoComponent } from './menu/menu-juego/menu-juego.component';
 
 //firebase
 
@@ -34,6 +34,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 //toast
 
 import { ToastrModule } from 'ngx-toastr';
+
+
 
 @NgModule({
   declarations: [
@@ -48,7 +50,7 @@ import { ToastrModule } from 'ngx-toastr';
     MenuLoginComponent,
     FormLoginComponent,
     FormRegistroComponent,
-    // MenuJuegoComponent
+    MenuJuegoComponent
   ],
   imports: [
     BrowserModule,
