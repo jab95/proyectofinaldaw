@@ -2,9 +2,9 @@
 
 
 
-![](C:\Users\el_ay\Desktop\COSAS\proyectofinaldaw\proyectofinaldaw\proyectofingrado\src\assets\imagenes\logo3.png)
+![asdasd](C:\Users\el_ay\Desktop\1522281389_237096_1522285029_noticia_normal.jpg)
 
-## 							¿Quién quiere ser millonario?
+¿Quién quiere ser millonario?
 
 
 
