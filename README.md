@@ -2,7 +2,7 @@
 
 
 
-![](C:\Users\el_ay\Desktop\COSAS\proyectofinaldaw\proyectofinaldaw\proyectofingrado\src\assets\imagenes\logo3.png)
+![logo3](C:\Users\el_ay\Desktop\COSAS\proyectofinaldaw\proyectofinaldaw\proyectofingrado\src\assets\imagenes\logo3.png)
 
 ## 							¿Quién quiere ser millonario?
 
