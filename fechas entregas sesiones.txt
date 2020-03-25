@@ -1,8 +1,8 @@
 
-primera entrega hasta rama 961825530c3bc64241ee6d962e4a55f08d57059a
+primera entrega hasta rama 
 
 con formularios de registro y login creados 
-
-
 usado angularfire para el login y registro, 
 tambien se usa https://github.com/scttcper/ngx-toastr como alertas para la app
+creado el menu de la pantalla de juego
+diferenciando si se entra en modo admin o invitado
