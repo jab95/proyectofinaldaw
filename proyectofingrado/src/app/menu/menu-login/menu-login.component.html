@@ -7,17 +7,19 @@
             <div class="col-sm-10 col-md-10 col-lg-10 col-xl-8">
                 <img alt="Angular Logo" id="logo" class="img-fluid w-75" src="../../../assets/imagenes/logo3.png">
             </div>
+
             <div class="col"></div>
         </div>
         <div class="row justify-content-center mb-2">
 
-            <div class="col-10 ">
+            <div class="col-sm-10 col-md-10 col-lg-10 col-xl-8 ">
 
                 <div class="fuller-button" (mouseenter)="sonarHover()" (click)="accederInvitado()" routerLink="/home">
                     Acceder</div>
                 <div class="fuller-button" (mouseenter)="sonarHover()" (click)="accederAdmin()">Acceder como admin</div>
 
             </div>
+
 
         </div>
         <ng-container *ngIf="accedeAdmin">
