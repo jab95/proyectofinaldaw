@@ -1,0 +1,31 @@
+<main>
+    <div id="cab">
+        <h1 class="text-center" mat-dialog-title>Añadir puntuación</h1>
+    </div>
+    <div mat-dialog-content>
+        <div class="container">
+
+            <form [formGroup]="rankingForm" class="form-horizontal">
+                <div class="form-group">
+
+                    <input type="text" formControlName="usuario" name="usuario" class="mt-1 form-control " id=""
+                        placeholder="Nombre de usuario">
+                </div>
+                <div class="form-group">
+
+                    <input type="hidden" formControlName="dineroAcumulado" name="dineroAcumulado"
+                        class="mt-1 form-control " id="">
+                </div>
+                <div class="form-group">
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="addPuntuacion(rankingForm.value)">
+                        Añadir
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

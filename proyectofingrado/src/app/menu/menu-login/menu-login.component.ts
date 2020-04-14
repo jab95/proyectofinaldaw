@@ -49,7 +49,8 @@ export class MenuLoginComponent implements OnInit, AfterViewInit {
 
   accederInvitado() {
     this.sonarClick();
-    this.dataservice.esInvitado = true;
+    // this.dataservice.esInvitado = true;
+    localStorage.setItem('invitado', "true")
 
 
   }

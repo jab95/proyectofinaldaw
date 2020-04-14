@@ -1,0 +1,33 @@
+<main>
+
+    <div mat-dialog-content>
+        <!-- <div id="chartContainer" style="height: 300px; width: 100%;"></div> -->
+
+        <ng-container *ngIf="llamando">
+            <p class="text-center" style="font-size: 2em;">Llamando</p>
+
+            <div class="row text-center animated fadeIn ">
+                <div class="col">
+                    <i class="fas fa-redo fa-spin fa-3x"></i>
+
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="llamando == false">
+            <p class="text-center" style="font-size: 1.2em; font-weight: bold;">TE HAN DADO ESTA RESPUESTA</p>
+            <p class="text-center mt-5" id="respuesta-dada" style="font-size: 1.2em;font-weight: bold;">
+                {{ palabraEscogida }}</p>
+
+
+        </ng-container>
+
+
+        <div class="fuller-button mt-5" (mouseenter)="sonarHover()" (click)="aceptarComodin()">
+            Aceptar
+        </div>
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

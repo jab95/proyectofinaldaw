@@ -1,0 +1,23 @@
+<main>
+    <div id="cab">
+        <h3 class="text-center" mat-dialog-title>Elije el nuevo seguro</h3>
+    </div>
+    <div class="text-center mt-3" mat-dialog-content>
+        <div class="container">
+
+            <form [formGroup]="seguroForm" class="form-horizontal">
+                <div class="form-group">
+
+                    <input type="number" formControlName="seguro" name="seguro" class="mt-1 form-control " id=""
+                        placeholder="Seguro">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="aceptarComodin()">
+        Aceptar
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

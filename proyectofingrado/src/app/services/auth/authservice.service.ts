@@ -43,24 +43,6 @@ export class AuthserviceService {
   }
 
 
-
-  // /* Sign up */
-  // SignUp(email: string, password: string): boolean {
-  //   this.fallado = true;
-
-  //   this.angularFireAuth
-  //     .auth
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then(res => {
-  //       this.fallado = false;
-  //     })
-  //     .catch(error => {
-  //     });
-
-  //   return this.fallado;
-
-  // }
-
   /* Sign in */
   SignIn(email: string, password: string): boolean {
 

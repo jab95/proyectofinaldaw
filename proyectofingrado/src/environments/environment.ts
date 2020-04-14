@@ -13,6 +13,8 @@ export const environment = {
     messagingSenderId: "1023422580598",
     appId: "1:1023422580598:web:876d66b8bd72164f1fdc57",
     measurementId: "G-NCHD93ZPDW"
+
+
     // };
     // apiKey: "AIzaSyAFyM3ij4ll6lCfIgJdwVVzjK15XgZjL_Y",
     // authDomain: "millonario-74a46.firebaseapp.com",

@@ -33,7 +33,11 @@ body {
     font-size: 0.85em;
   }
 
+  .texto-movil{
+    font-size: 0.85em;
+  }
 
+  
 }
 
 @media only screen and (max-width: 414px) {
@@ -41,23 +45,46 @@ body {
 .fuller-button, .fuller-button2{
 font-size: 0.7em;
 }
+.texto-movil{
+  font-size: 0.95em;
+}
 
 
 }
 
-@media only screen and (max-height: 740px),screen and (max-width: 575px) {
+
+
+@media only screen and (max-height: 740px) and (max-width: 575px) and (orientation:portrait) {
   #template-botones{
     margin-top: 2rem;
   }
-  
-  
+ 
+
+  .fila-cronometro-movil{
+    display: block;
+  }
+
+   
 }
+
+
+@media only screen and (max-height: 740px) and (max-width: 575px) and (orientation:landscape) {
+ 
+  .cronometro-row2{
+    display: block;
+    }
+   
+}
+
 
 
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 575px) {
    
+  .btn-comodin{
+    font-size: 0.8em;
+  }
   
 .custom-dialog-container .mat-dialog-container {
 
@@ -65,15 +92,37 @@ font-size: 0.7em;
   /* add your styles */
 }
 
-#img-logo{
+  
+.cronometro-row2{
   display: none;
-}
+  }
 
 .vista{
   padding-top: 3rem;
 }
+#img-logo{
+  display: none;
+}
+
+
 
 }
+@media only screen and (min-width: 575px) {
+  .fila-cronometro-movil{
+    display: none;
+  }
+  
+}
+
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+ 
+  }
+  
 
 
 
@@ -91,7 +140,12 @@ font-size: 0.7em;
   .nuevo-btn-salir{
     display: block;
   }
+  // #img-logo{
+  //   display: none;
+  // }
 
+ 
+  
 
 }
 
@@ -110,9 +164,9 @@ font-size: 0.7em;
   }
 
   
-  #img-logo{
-    display: block;
-  }
+  // #img-logo{
+  //   display: block;
+  // }
 
   
  
@@ -123,6 +177,11 @@ font-size: 0.7em;
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) {
+ 
+  #saldo-acumulado{
+    font-size: 0.8em
+  }
+
   .row1{
     display: none;
 
@@ -132,11 +191,20 @@ font-size: 0.7em;
     display: block;
   }
 
- 
+  .cronometro-row2{
+    margin: 0 auto;
+    border-style: groove;
+    border-width: 0.5rem;
+    border-color: rgba(60,68,115,1);
+    font-size: 1.5em;
+    padding: 0.5rem;
+    border-radius: 7px;
+  }
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
   .custom-dialog-container .mat-dialog-container {
     width: 21rem;
 
@@ -151,12 +219,20 @@ font-size: 0.7em;
   .nuevo-btn-salir{
     display: none;
   }
-
-  
   .row2{
     display: none;
   }
 
+  #cronometro{
+    margin: 0 auto;
+     border-style: groove;
+     border-width: 0.5rem;
+     border-color: rgba(60,68,115,1);
+     font-size: 2.5em;
+     padding: 0.5rem;
+     border-radius: 7px;
+    }
+  
 
 }
 
@@ -181,10 +257,7 @@ font-size: 0.7em;
   #logo{
     width: 60vh;
   }
- 
- 
- 
- 
+  
 
 }
 

@@ -60,7 +60,7 @@ export class FormLoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
           this.router.navigateByUrl('/home');
           this.dialogRef.close();
-          this.dataservice.esInvitado = false;
+          localStorage.setItem('invitado', "false")
           this.dataservice.emailAdmin = this.loginForm.get('email').value;
 
         }, err => {

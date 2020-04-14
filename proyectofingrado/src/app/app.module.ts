@@ -27,13 +27,22 @@ import { MenuJuegoComponent } from './menu/menu-juego/menu-juego.component';
 
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { PreguntasService } from './services/preguntas.service';
 
 //toast
 
 import { ToastrModule } from 'ngx-toastr';
+import { Comodin50Component } from './components/comodin50/comodin50.component';
+import { ComodinPublicoComponent } from './components/comodin-publico/comodin-publico.component';
+import { ComodinLLamadaComponent } from './components/comodin-llamada/comodin-llamada.component';
+import { MuestraSaldoComponent } from './components/muestra-saldo/muestra-saldo.component';
+import { ColocaSeguroComponent } from './components/coloca-seguro/coloca-seguro.component';
+import { AcertadaFalladaComponent } from './components/acertada-fallada/acertada-fallada.component';
+import { AddRankingComponent } from './components/add-ranking/add-ranking.component';
+import { CargandoComponent } from './components/cargando/cargando.component';
 
 
 
@@ -50,7 +59,15 @@ import { ToastrModule } from 'ngx-toastr';
     MenuLoginComponent,
     FormLoginComponent,
     FormRegistroComponent,
-    MenuJuegoComponent
+    MenuJuegoComponent,
+    Comodin50Component,
+    ComodinPublicoComponent,
+    ComodinLLamadaComponent,
+    MuestraSaldoComponent,
+    ColocaSeguroComponent,
+    AcertadaFalladaComponent,
+    AddRankingComponent,
+    CargandoComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +84,12 @@ import { ToastrModule } from 'ngx-toastr';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule,// imports firebase/storage only needed for storage features
     ToastrModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{ provide: FirestoreSettingsToken, useValue: {} }, PreguntasService],
   bootstrap: [AppComponent],
-  entryComponents: [FormLoginComponent, FormRegistroComponent]
+  entryComponents: [FormLoginComponent, FormRegistroComponent, Comodin50Component,
+    ComodinLLamadaComponent, ComodinPublicoComponent, MuestraSaldoComponent,
+    ColocaSeguroComponent, AcertadaFalladaComponent, AddRankingComponent, CargandoComponent]
 })
 export class AppModule { }

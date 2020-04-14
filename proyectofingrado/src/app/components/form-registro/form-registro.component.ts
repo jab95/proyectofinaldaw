@@ -71,7 +71,7 @@ export class FormRegistroComponent implements OnInit, AfterViewInit {
 
             this.router.navigateByUrl('/home');
             this.dialogRef.close();
-            this.dataservice.esInvitado = false;
+            localStorage.setItem('invitado', "false")
             this.dataservice.emailAdmin = this.registerForm.get('email').value;
 
 

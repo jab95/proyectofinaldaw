@@ -1,1 +1,145 @@
-<p>pantalla-juego works!</p>
+<div class="container pt-1 ">
+
+    <main>
+
+        <div class="row row2">
+            <div class="row mr-0">
+                <div class="col "></div>
+
+                <div class="columna-comodines col-sm-8 col-md-8 col-lg-8 col-xl-6 d-flex justify-content-center">
+
+
+                    <div class="fuller-button-juego btn-comodin  ml-2" #cincuenta2 (mouseenter)="sonarHover()"
+                        (click)="click5050($event)">Comodín 50/50
+
+                    </div>
+
+                    <div class="fuller-button-juego btn-comodin  ml-2" #llamada2 (mouseenter)="sonarHover()"
+                        (click)="clickLLamada($event)">Comodín llamada
+
+                    </div>
+
+                    <div class="fuller-button-juego btn-comodin  ml-2" #publico2 (mouseenter)="sonarHover()"
+                        (click)="clickPublico($event)">Comodín público
+
+                    </div>
+
+                </div>
+                <div class="col">
+                </div>
+
+            </div>
+            <div class="row fila-cronometro-movil mr-0">
+                <div class="col "></div>
+                <div class="col ">
+                    <div class="row mt-5 mb-2 ">
+                        <div id="cronometro-movil">
+                            <div>{{contadorCronometro}}</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+
+            </div>
+            <div class="row mr-0">
+                <div class="col columna3"></div>
+
+                <div class=" columna2 col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6" id="img-logo">
+                    <img alt="Angular Logo" id="logo" class="img-fluid" src="../../../assets/imagenes/logo3.png">
+                </div>
+                <div class="col columna3 mt-3">
+                    <div id="cronometro" class="cronometro-row2">{{contadorCronometro}}</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row row1">
+
+            <div class="columna-comodines col-sm-1 col-md-2 col-lg-3 col-xl-3 mt-5">
+
+
+                <div class="fuller-button-juego  ml-2" (mouseenter)="sonarHover()" #cincuenta1
+                    (click)="click5050($event)">Comodín 50/50
+
+                </div>
+
+                <div class="fuller-button-juego  ml-2" (mouseenter)="sonarHover()" #llamada1
+                    (click)="clickLLamada($event)">Comodín llamada
+
+                </div>
+
+                <div class="fuller-button-juego  ml-2" (mouseenter)="sonarHover()" #publico1
+                    (click)="clickPublico($event)">Comodín público
+
+                </div>
+            </div>
+            <div class=" columna2 col-8 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                <img alt="Angular Logo" id="logo" class="img-fluid" src="../../../assets/imagenes/logo3.png">
+            </div>
+            <div class="col columna3 mt-5">
+
+                <div id="cronometro">{{contadorCronometro}}</div>
+
+            </div>
+        </div>
+
+        <div>
+
+            <h1 id="n-pregunta" class="texto-movil" #tituloPregunta> </h1>
+
+            <div class="row texto-movil mt-2">
+
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="fuller-button-juego" (mouseenter)="sonarHover()" #respuesta1 #btnRespuesta
+                        (click)="clickRespuesta($event)"></div>
+                </div>
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="fuller-button-juego" (mouseenter)="sonarHover()" #respuesta2 #btnRespuesta
+                        (click)="clickRespuesta($event)"></div>
+                </div>
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="fuller-button-juego" (mouseenter)="sonarHover()" #respuesta3 #btnRespuesta
+                        (click)="clickRespuesta($event)"></div>
+                </div>
+                <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <div class="fuller-button-juego" (mouseenter)="sonarHover()" #respuesta4 #btnRespuesta
+                        (click)="clickRespuesta($event)"></div>
+                </div>
+
+
+            </div>
+            <div class="row texto-movil">
+                <div class="fuller-button-juego d-inline btn-confirmar " (mouseenter)="sonarHover()"
+                    (click)="ComprobarRespuesta()" #confirmar>Confirmar
+                </div>
+                <div class="fuller-button-juego d-inline btn-plantarse " (mouseenter)="sonarHover()"
+                    (click)="Plantarse()" #plantarse>Plantarse
+                </div>
+            </div>
+            <div class="row pt-4 ml-1 mr-1 mb-3">
+                <div class="col">
+                    <div class="progress">
+                        <div class="progress-bar" #barraprogreso role="progressbar" aria-valuenow="25" aria-valuemin="0"
+                            aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music2.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

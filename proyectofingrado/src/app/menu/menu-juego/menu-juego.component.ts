@@ -31,7 +31,7 @@ export class MenuJuegoComponent implements OnInit, AfterViewInit {
 
   CambiaEstiloBtnAdmin() {
 
-    this.invitado = this.dataservice.esInvitado;
+    this.invitado = localStorage.getItem('invitado') == "true" ? true : false;
 
   }
 

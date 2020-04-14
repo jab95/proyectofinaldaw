@@ -1,0 +1,25 @@
+<main>
+    <div id="cab">
+        <h1 class="text-center" mat-dialog-title>Dinero acumulado</h1>
+    </div>
+    <div class="dinero-acumulado text-center mt-3" mat-dialog-content>
+        <p #pregunta12 id="pregunta12">1000000</p>
+        <p #pregunta11 id="pregunta11">500000</p>
+        <p #pregunta10 id="pregunta10">250000</p>
+        <p #pregunta9 id="pregunta9">150000</p>
+        <p #pregunta8 id="pregunta8">75000</p>
+        <p #pregunta7 id="pregunta7">35000</p>
+        <p #pregunta6 id="pregunta6">15000</p>
+        <p #pregunta5 id="pregunta5">5000</p>
+        <p #pregunta4 id="pregunta4" class="seguro1">1000</p>
+        <p #pregunta3 id="pregunta3">500</p>
+        <p #pregunta2 id="pregunta2">250</p>
+        <p #pregunta1 id="pregunta1">100</p>
+    </div>
+    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="aceptarComodin()">
+        Aceptar
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

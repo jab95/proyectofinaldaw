@@ -1,0 +1,26 @@
+<main>
+    <div id="cab">
+        <h3 class="text-center" mat-dialog-title #acertadafallida></h3>
+    </div>
+    <div *ngIf="dataservice.acertada == false" class="text-center mt-3" mat-dialog-content>
+        <p style="font-weight: bold;" id="saldo-acumulado">TU SALDO ACUMULADO ES DE {{saldoAcumulado}}€</p>
+        <p style="font-weight: bold;" id="saldo-acumulado">¿Desea guardar el resultado?</p>
+        <div class="fuller-button" (mouseenter)="sonarHover()" (click)="guardarRanking()">
+            Guardar ranking
+        </div>
+    </div>
+    <div *ngIf="dataservice.llegadoAMillon" class="text-center mt-3" mat-dialog-content>
+        <p style="font-weight: bold;" id="saldo-acumulado">Has conseguido 1 millon de €</p>
+        <p style="font-weight: bold;" id="saldo-acumulado">¿Desea guardar el resultado?</p>
+        <div class="fuller-button" (mouseenter)="sonarHover()" (click)="guardarRanking()">
+            Guardar ranking
+        </div>
+    </div>
+
+    <div class="fuller-button" #aceptarsalir (mouseenter)="sonarHover()" (click)="aceptarComodin()">
+        Aceptar
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

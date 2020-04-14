@@ -1,5 +1,5 @@
 
-primera entrega hasta rama 
+primera entrega hasta rama f5224c2c925e481206f40edc51fcb6c4155adbaf
 
 con formularios de registro y login creados 
 usado angularfire para el login y registro, 
