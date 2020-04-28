@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
 import { MatDialogRef } from "@angular/material";
 import { DataService } from 'src/app/services/data/data.service';
+import { registerLocaleData } from '@angular/common';
+import es from '@angular/common/locales/es';
 
 @Component({
   selector: 'app-muestra-saldo',
@@ -36,6 +38,7 @@ export class MuestraSaldoComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
+    registerLocaleData(es);
 
 
   }
@@ -59,19 +62,18 @@ export class MuestraSaldoComponent implements OnInit, AfterViewInit {
     if (this.dataservice.seguroNuevo != 0) {
 
       for (let index = 0; index < this.preguntas.length; index++) {
-        if (this.preguntas[index].nativeElement.id == "pregunta" + this.dataservice.seguroNuevo) {
+        if (this.preguntas[index].nativeElement.children[0].id == "pregunta" + this.dataservice.seguroNuevo) {
           this.preguntas[index].nativeElement.style.background = "rgb(91, 98, 141)"
-          this.dataservice.dineroSegundoSeguro = parseInt(this.preguntas[this.dataservice.seguroNuevo - 1].nativeElement.innerHTML)
-          console.log(this.dataservice.dineroSegundoSeguro)
+          this.dataservice.dineroSegundoSeguro = parseInt(this.preguntas[this.dataservice.seguroNuevo - 1].nativeElement.children[0].innerHTML)
         }
       }
     }
 
     for (let index = 0; index < this.preguntas.length; index++) {
 
-      if (this.preguntas[index].nativeElement.id == "pregunta" + (this.dataservice.contadorPreguntaActual + 1)) {
+      if (this.preguntas[index].nativeElement.children[0].id == "pregunta" + (this.dataservice.contadorPreguntaActual + 1)) {
         this.preguntas[index].nativeElement.style.background = "rgb(221, 221, 221)"
-        this.dataservice.dineroAcumulado = parseInt(this.preguntas[index].nativeElement.innerHTML)
+        this.dataservice.dineroAcumulado = parseInt(this.preguntas[index].nativeElement.children[0].innerHTML)
       }
     }
   }

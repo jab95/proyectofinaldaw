@@ -1,1 +1,57 @@
-<p>about works!</p>
+<div class="container pt-1 ">
+
+    <main>
+
+        <h1 class="mt-5 mb-3 text-center">ACERCA DE</h1>
+        <div id="tabla-acercade" class="texto-acercade">
+            <p>Este juego ha sido desarrollado por José Ayala Bernal</p>
+            <p>Como proyecto de fin de grado.</p>
+            <p>Para el ciclo superior de Desarrollo de aplicaciones web</p>
+            <img alt="Angular Logo" id="logo" class="text-center img-fluid w-25"
+                src="../../../assets/imagenes/logo3.png">
+
+            <h2 class="mt-4 mb-3 text-center" style="text-decoration: underline;">¿COMO SE JUEGA?</h2>
+            <p>Tendras que responder a 12 preguntas</p>
+            <p>Dentro del límite de tiempo.</p>
+            <p>Tienes la ayuda de 3 comodines</p>
+            <p>Que solo podras utilizar 1 vez en toda la partida</p>
+            <p>En cada pregunta, tienes la opción de "plantarse"</p>
+            <p>Que hara que termines el juego con el dinero acumulado</p>
+            <p>Al alcanzar y acertar la pregunta nº4 (primer seguro)</p>
+            <p>Deberas de elegir un segundo seguro</p>
+            <p>Al acabar la partida, te da opción a guardar tu puntuación</p>
+            <p style="text-decoration: underline;">Si fallas una pregunta:</p>
+            <p>- Si alcanzaste y acertaste la pregunta nº4 pero no alcanzaste el 2º seguro, te iras con 1000€
+            </p>
+            <p>- Si alcanzaste y acertaste la pregunta del 2º seguro, te iras con el dinero del 2º seguro</p>
+
+
+        </div>
+
+        <div class="row justify-content-center mb-5">
+
+            <div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+
+                <div class="fuller-button" (mouseenter)="sonarHover()" routerLink="/inicio" (click)="sonarClick()">
+                    Volver
+                    a inicio
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

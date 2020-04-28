@@ -41,9 +41,9 @@
 
 
                 </div>
-                <div class=" col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()"
-                    (click)="sonarClick()">
-                    <div class="fuller-button">Ranking</div>
+                <div class=" col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 ">
+                    <div (mouseenter)="sonarHover()" (click)="sonarClick()" class="fuller-button"
+                        routerLink="/rankings">Ranking</div>
 
 
                 </div>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="col-8 col-sm-6 col-md-6 col-lg-3 col-xl-3 " (mouseenter)="sonarHover()"
                     (click)="sonarClick()">
-                    <div class="fuller-button">Acerca de</div>
+                    <div class="fuller-button" routerLink="/acerca">Acerca de</div>
 
 
                 </div>

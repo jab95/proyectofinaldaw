@@ -271,7 +271,7 @@ export class PantallaJuegoComponent implements OnInit, AfterViewInit {
         this.dataservice.seguroNuevo = 0
         this.dataservice.llegadoAMillon = false
 
-        this.router.navigate(['/home']);
+        this.router.navigate(['/inicio']);
 
       })
 
@@ -301,7 +301,7 @@ export class PantallaJuegoComponent implements OnInit, AfterViewInit {
           this.dataservice.seguroNuevo = 0
           this.dataservice.llegadoAMillon = false
 
-          this.router.navigate(['/home']);
+          this.router.navigate(['/inicio']);
 
         })
 
@@ -353,7 +353,7 @@ export class PantallaJuegoComponent implements OnInit, AfterViewInit {
       this.dataservice.seguroNuevo = 0
       this.dataservice.llegadoAMillon = false
 
-      this.router.navigate(['/home']);
+      this.router.navigate(['/inicio']);
 
     })
 
@@ -448,7 +448,7 @@ export class PantallaJuegoComponent implements OnInit, AfterViewInit {
           this.dataservice.seguroNuevo = 0
           this.dataservice.llegadoAMillon = false
 
-          this.router.navigate(['/home']);
+          this.router.navigate(['/inicio']);
 
 
 

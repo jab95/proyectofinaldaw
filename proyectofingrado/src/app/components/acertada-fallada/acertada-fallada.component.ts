@@ -101,7 +101,7 @@ export class AcertadaFalladaComponent implements OnInit, AfterViewInit {
     dialogoAñadeRanking.afterClosed().subscribe(result => {
 
       this.dialogRef.close();
-      this.router.navigate(['/home']);
+      this.router.navigate(['/inicio']);
 
     })
 

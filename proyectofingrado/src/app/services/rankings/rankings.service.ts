@@ -9,10 +9,10 @@ export class RankingsService {
 
   private dbPath = 'rankings';
 
-  rankings: AngularFirestoreCollection<Ranking> = null;
-  preguntasNivel: AngularFirestoreCollection<Ranking> = null;
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore) {
+
+  }
 
 
   createRanking(data) {
@@ -25,20 +25,18 @@ export class RankingsService {
         }, err => reject(err));
     });
   }
-  createCustomer(customer: Ranking): void {
-    this.rankings.add({ ...customer });
-  }
+
 
   updateCustomer(key: string, value: any): Promise<void> {
-    return this.rankings.doc(key).update(value);
+    return this.firestore.collection(this.dbPath).doc(key).update(value);
   }
 
   deleteCustomer(key: string): Promise<void> {
-    return this.rankings.doc(key).delete();
+    return this.firestore.collection(this.dbPath).doc(key).delete();
   }
 
-  getPreguntas(): AngularFirestoreCollection<Ranking> {
-    return this.rankings;
+  getRankings(): AngularFirestoreCollection<Ranking> {
+    return this.firestore.collection(this.dbPath)
   }
 
   getPreguntasNivel(nivel: number): AngularFirestoreCollection<Ranking> {
@@ -46,7 +44,7 @@ export class RankingsService {
 
   }
   deleteAll() {
-    this.rankings.get().subscribe(
+    this.firestore.collection(this.dbPath).get().subscribe(
       querySnapshot => {
         querySnapshot.forEach((doc) => {
           doc.ref.delete();

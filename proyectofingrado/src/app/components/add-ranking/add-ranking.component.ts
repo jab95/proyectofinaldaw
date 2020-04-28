@@ -56,6 +56,11 @@ export class AddRankingComponent implements OnInit, AfterViewInit {
         positionClass: 'toast-top-center',
 
       });
+    } else if (this.rankingForm.get('usuario').value.length > 12) {
+      this.toastr.error('El nombre de usuario debe de ser menor a 12 caracteres', 'Error al añadir puntuación', {
+        positionClass: 'toast-top-center',
+
+      });
     } else {
 
       this.rankingService.createRanking(value)
@@ -65,22 +70,6 @@ export class AddRankingComponent implements OnInit, AfterViewInit {
 
         })
 
-      // this.authenticationService.doLogin(value)
-      //   .then(res => {
-
-      //     this.router.navigateByUrl('/home');
-      //     this.dialogRef.close();
-      //     localStorage.setItem('invitado', "false")
-      //     this.dataservice.emailAdmin = this.loginForm.get('email').value;
-
-      //   }, err => {
-
-      //     this.toastr.error('El correo introducido o la contraseña no es correcta', 'Error al iniciar admin', {
-      //       positionClass: 'toast-top-center',
-
-      //     });
-
-      //   })
     }
 
 

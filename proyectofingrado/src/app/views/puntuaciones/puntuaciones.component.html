@@ -1,1 +1,48 @@
-<p>puntuaciones works!</p>
+<div class="container pt-1 ">
+
+    <main>
+
+        <h1 class="mt-5 text-center">RANKINGS</h1>
+        <h5 class="mb-2 text-center">De las 11 mejores puntuaciones</h5>
+        <div id="tabla-puntuaciones">
+            <div class="row cabecera-puntuaciones mb-3" style="border-bottom: 2px; border-bottom-style: solid;">
+                <div class="col ">Usuario</div>
+                <div class="col ">Puntuación</div>
+            </div>
+
+            <div id="contenido-tabla" *ngFor="let ranking of rankings">
+                <div class="row puntuaciones">
+                    <div class="col">{{ranking.usuario}}</div>
+                    <div class="col  ">{{ ranking.dineroAcumulado | number:'':'es'}}</div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mb-2">
+
+            <div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+
+                <div class="fuller-button" (mouseenter)="sonarHover()" routerLink="/inicio" (click)="sonarClick()">
+                    Volver
+                    a inicio
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

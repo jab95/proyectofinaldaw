@@ -1,1 +1,34 @@
-<p>administracion works!</p>
+<div class="container pt-1 ">
+
+    <main>
+
+        <h1>{{headMessage}}</h1>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Titulo de pregunta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pregunta of preguntas; let i = index" (click)="setClickedRow(i)"
+                    [class.active]="i == selectedRow">
+                    <td>{{pregunta.pregunta}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="well well-lg">
+            Selected Row : <strong>{{selectedRow}}</strong>
+        </div>
+    </main>
+</div>
+
+
+<audio autoplay loop>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

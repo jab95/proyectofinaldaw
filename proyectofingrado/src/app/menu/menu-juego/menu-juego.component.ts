@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, AfterViewInit, ElementRef } from '@angular/core';
 import { DataService } from '../../services/data/data.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-juego',
@@ -21,6 +22,7 @@ export class MenuJuegoComponent implements OnInit, AfterViewInit {
 
   constructor(public dataservice: DataService,
     private toastr: ToastrService,
+    private router: Router,
 
   ) { }
 
@@ -52,6 +54,9 @@ export class MenuJuegoComponent implements OnInit, AfterViewInit {
         positionClass: 'toast-top-center',
 
       });
+    } else {
+      this.router.navigateByUrl('/administracion');
+
     }
   }
 
