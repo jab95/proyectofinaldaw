@@ -6,6 +6,7 @@ import { PantallaJuegoComponent } from './views/pantalla-juego/pantalla-juego.co
 import { PuntuacionesComponent } from './views/puntuaciones/puntuaciones.component';
 import { AboutComponent } from './views/about/about.component';
 import { AdministracionComponent } from './views/administracion/administracion.component';
+import { HerramientasComponent } from './views/herramientas/herramientas.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'acerca', component: AboutComponent },
   { path: 'juego', component: PantallaJuegoComponent },
   { path: 'administracion', component: AdministracionComponent },
+  { path: 'herramientas', component: HerramientasComponent },
 
 
 ];

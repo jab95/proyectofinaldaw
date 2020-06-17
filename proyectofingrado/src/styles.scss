@@ -1,19 +1,20 @@
+// CSS Reset, comment out if not required or using a different module
 /* You can add global styles to this file, and also import other style files */
 // regular style toast
 @import '~ngx-toastr/toastr';
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
 @font-face {
     font-family: "fuentegame";
-    src: url("assets/fuentes/ARCADECLASSIC.TTF");
+    src: url("assets/fuentes/Quantico-Regular.ttf");
     font-weight: bold;
 
   }
 
 
-html, body { height: 100%;  }
+
 body { 
   
-    background: rgb(13,13,13);
     background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(196,199,242,1) 0%, rgba(60,68,115,1) 110%);
    
     ;margin: 0 auto;
@@ -21,26 +22,57 @@ body {
     
 }
 
+h1,h2,h3,h4,h5{
+  font-family: "fuentegame";
+
+}
+input[type=radio] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type=checkbox] {
+  width: 40px;
+  height: 40px;
+  // margin-right: 20px;
+}
+
+
 .custom-dialog-container .mat-dialog-container {
 
   background: radial-gradient(circle, rgba(13,13,13,1) 0%, rgba(196,199,242,1) 0%, rgba(60,68,115,1) 170%);
-
+  margin: auto;
   /* add your styles */  
 }
 
+
 @media only screen and (min-width: 390px) {
   .cabecera-puntuaciones{
-    font-size: 1.4em;
+    font-size: 1em;
   }
 
   .puntuaciones,.texto-acercade{
-    font-size: 1.1em;    
+    font-size: 0.8em;    
+    }
+
+    .texto-administracion{
+      font-size: 1em
+    }
+
+    .texto-ajustes{
+      font-size: 1em;
+    }
+
+    .tipo-ajuste{
+      font-size: 1.5em;
     }
 
 }
 @media only screen and (max-width: 390px) {
 
-
+  .inputs-modificar{
+    width: 160px;
+  }
 
   .fuller-button, .fuller-button2{
     font-size: 0.85em;
@@ -48,19 +80,89 @@ body {
 
 
   .cabecera-puntuaciones{
-    font-size: 0.15em;
+    font-size: 1em;
 
   }
   .texto-movil{
     font-size: 0.85em;
   }
 
-  
+ .tamaño-tabla-preguntas{
+    height: 21rem;
+  }
 }
+
+@media only screen and (max-width: 414px) and (min-width:390px) {
+  .tamaño-tabla-preguntas{
+    height: 22rem;
+  }
+}
+
+@media only screen and (min-width:415px) {
+
+.tamaño-tabla-preguntas{
+  height: 28rem;
+}
+.row-administracion3{
+  display: none;
+}
+
+.cabpun1{
+  display: block;
+}
+.cabpun2{
+  display: none;
+}
+
+.row-modif-2{
+  display: none;
+}
+.row-modif-1{
+  display: block;
+}
+
+.row-ajustes1{
+  display: block;
+}
+.row-ajustes2{
+  display: none;
+}
+
+}
+
 
 @media only screen and (max-width: 414px) {
 
- 
+  .row-administracion2{
+    display: none;
+  }
+  .row-administracion1{
+    display: none;
+  }
+  .row-administracion3{
+    display: block;
+  }
+
+  .row-ajustes2{
+    display: block;
+  }
+  .row-ajustes1{
+    display: none;
+  }
+
+  .cabpun1{
+    display: none;
+  }
+  .cabpun2{
+    display: block;
+  }
+  .row-modif-2{
+    display: block;
+  }
+  .row-modif-1{
+    display: none;
+  }
+  
 
 .fuller-button, .fuller-button2{
 font-size: 0.7em;
@@ -68,7 +170,6 @@ font-size: 0.7em;
 .texto-movil{
   font-size: 0.95em;
 }
-
 
 }
 
@@ -97,6 +198,14 @@ font-size: 0.7em;
 }
 
 
+@media only screen and (max-width: 574px) and (min-width:391px) {
+  .inputs-modificar{
+    width: 180px;
+  }
+  
+}
+
+
 
 
 /* Extra small devices (phones, 600px and down) */
@@ -112,10 +221,8 @@ font-size: 0.7em;
   /* add your styles */
 }
 
-.cabecera-puntuaciones{
-  font-size: 0.75em;
 
-}
+
 
   
 .cronometro-row2{
@@ -144,14 +251,6 @@ font-size: 0.7em;
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-
-  
- 
-  }
-  
 
 
 
@@ -185,10 +284,24 @@ font-size: 0.7em;
   .cabecera-puntuaciones{
     font-size: 1.6em;
   }
+
+  .texto-ajustes{
+    font-size: 1.2em;
+  }
+
   .puntuaciones,.texto-acercade{
     font-size: 1.1em;    
     }
 
+    .texto-administracion{
+      font-size: 1.1em
+    }
+
+
+    .tipo-ajuste{
+      font-size: 1.3em;
+    }
+  
 
   .custom-dialog-container .mat-dialog-container {
 
@@ -210,12 +323,30 @@ font-size: 0.7em;
  
 }
 
+@media only screen and (max-width: 992px) and (min-width: 415px) {
+
+.row-administracion2{
+  display: block;
+}
+}
+
+
+
+@media only screen and (max-width: 991px) and (min-width:575px) {
+  .inputs-modificar{
+    width: 180px;
+  }
+  
+}
+
+
+
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 992px) {
 
 
-
+  
  
   #saldo-acumulado{
     font-size: 0.8em
@@ -230,6 +361,12 @@ font-size: 0.7em;
     display: block;
   }
 
+
+  .row-administracion1{
+    display: none;
+  }
+ 
+ 
   .cronometro-row2{
     margin: 0 auto;
     border-style: groove;
@@ -244,17 +381,40 @@ font-size: 0.7em;
   
 }
 
+@media only screen and (min-width: 575px) and (max-width:992) {
+
+
+}
+
+
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 993px) {
 
-  .cabecera-puntuaciones{
-    font-size: 2.3em;
+  .inputs-modificar{
+    width: 210px;
   }
+  
+
+  .cabecera-puntuaciones{
+    font-size: 2em;
+  }
+  .texto-ajustes{
+    font-size: 1.4em;
+  }
+
   .puntuaciones,.texto-acercade{
     font-size: 1.3em;    
     }
+    .texto-administracion{
+      font-size: 1.2em
+    }
 
 
+    .tipo-ajuste{
+      font-size: 1.5em;
+    }
+  
 
   .custom-dialog-container .mat-dialog-container {
     width: 21rem;
@@ -273,6 +433,10 @@ font-size: 0.7em;
   .row2{
     display: none;
   }
+  .row-administracion2{
+    display: none;
+  }
+  
 
   #cronometro{
     margin: 0 auto;
@@ -290,6 +454,10 @@ font-size: 0.7em;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   
+
+ 
+
+
   .custom-dialog-container .mat-dialog-container {
 
     width: 22rem;
@@ -375,7 +543,6 @@ font-size: 0.7em;
   }
 
 }
-
 
 
 

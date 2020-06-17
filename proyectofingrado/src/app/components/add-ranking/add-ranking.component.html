@@ -1,6 +1,6 @@
 <main>
     <div id="cab">
-        <h1 class="text-center" mat-dialog-title>Añadir puntuación</h1>
+        <h3 class="text-center">Añadir puntuación</h3>
     </div>
     <div mat-dialog-content>
         <div class="container">
@@ -13,7 +13,14 @@
                 </div>
                 <div class="form-group">
 
+                    <!-- EL DINERO ACUMULADO SE GUARDA EN ESTE CAMPO OCULTO -->
                     <input type="hidden" formControlName="dineroAcumulado" name="dineroAcumulado"
+                        class="mt-1 form-control " id="">
+                </div>
+                <div class="form-group">
+
+                    <!-- EL NUMERO DE COMODINES USADOS SE GUARDA EN ESTE CAMPO OCULTO -->
+                    <input type="hidden" formControlName="comodinesUsados" name="comodinesUsados"
                         class="mt-1 form-control " id="">
                 </div>
                 <div class="form-group">

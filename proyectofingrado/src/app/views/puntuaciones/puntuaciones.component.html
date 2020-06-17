@@ -2,26 +2,50 @@
 
     <main>
 
-        <h1 class="mt-5 text-center">RANKINGS</h1>
-        <h5 class="mb-2 text-center">De las 11 mejores puntuaciones</h5>
+        <h1 class=" text-center">RANKINGS</h1>
+        <h5 class="mb-1 text-center">De las 11 mejores puntuaciones</h5>
         <div id="tabla-puntuaciones">
-            <div class="row cabecera-puntuaciones mb-3" style="border-bottom: 2px; border-bottom-style: solid;">
-                <div class="col ">Usuario</div>
-                <div class="col ">Puntuación</div>
-            </div>
+            <div class="cabpun1">
+                <div class="row cabecera-puntuaciones  mb-3" style="border-bottom: 2px; border-bottom-style: solid;">
+                    <div class="col-2 ">Usuario</div>
+                    <div class="col-5 " style="text-align: right;">Puntuación</div>
+                    <div class="col-5 " style="text-align: right;">Comodines Usados</div>
+                </div>
 
-            <div id="contenido-tabla" *ngFor="let ranking of rankings">
-                <div class="row puntuaciones">
-                    <div class="col">{{ranking.usuario}}</div>
-                    <div class="col  ">{{ ranking.dineroAcumulado | number:'':'es'}}</div>
+                <div id="contenido-tabla" *ngFor="let ranking of rankings">
+                    <div class="row puntuaciones">
+                        <div class="col-2">{{ranking.usuario}}</div>
+
+                        <!-- ES NECESARIO HACE ESTO PARA QUE APAREZCAN LOS PUNTOS EN LOS NUMEROS -->
+                        <div class="col-5  " style="text-align: right;">{{ ranking.dineroAcumulado | number:'':'es'}}
+                        </div>
+                        <div class="col-5  " style="text-align: right;">{{ ranking.comodinesUsados}}</div>
+                    </div>
                 </div>
             </div>
+            <div class="cabpun2">
+                <div class="row cabecera-puntuaciones  mb-3" style="border-bottom: 2px; border-bottom-style: solid;">
+                    <div class="col-5 ">Usu.</div>
+                    <div class="col-4 " style="text-align: right;">Puntuacion</div>
+                    <div class="col-2 " style="text-align: right;">Comod. Usados</div>
+                </div>
 
+                <div id="contenido-tabla" *ngFor="let ranking of rankings">
+                    <div class="row puntuaciones">
+                        <div class="col-5">{{ranking.usuario}}</div>
+
+                        <!-- ES NECESARIO HACE ESTO PARA QUE APAREZCAN LOS PUNTOS EN LOS NUMEROS -->
+                        <div class="col-4  " style="text-align: right;">{{ ranking.dineroAcumulado | number:'':'es'}}
+                        </div>
+                        <div class="col-2  " style="text-align: right;">{{ ranking.comodinesUsados}}</div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row justify-content-center mb-2">
 
-            <div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-4 ">
 
                 <div class="fuller-button" (mouseenter)="sonarHover()" routerLink="/inicio" (click)="sonarClick()">
                     Volver
@@ -39,7 +63,7 @@
 </div>
 
 
-<audio autoplay loop>
+<audio autoplay loop #volumen>
     <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
 
 </audio>

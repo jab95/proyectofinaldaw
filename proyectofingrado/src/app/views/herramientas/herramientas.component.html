@@ -1,1 +1,203 @@
-<p>herramientas works!</p>
+<div class="container pt-1 ">
+
+    <main>
+
+        <h1 class="mt-5 mb-3 text-center">AJUSTES</h1>
+        <div id="tabla-ajustes" class="texto-ajustes">
+
+            <div class="row-ajustes1">
+
+                <div class="row" style="height: 30px;">
+                    <div class="col-5 ">
+                    </div>
+                    <div class="col-2">
+                        <p>Llamada</p>
+                    </div>
+                    <div class="col-2">
+                        <p>Público</p>
+
+                    </div>
+                    <div class="col-2">
+                        <p>50/50</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5 ">
+                        <p class="tipo-ajuste" style="margin-right: auto;">COMODINES:</p>
+                    </div>
+                    <div class="col-2">
+                        <input type="checkbox" name="" id="" #comodinLLamada>
+                    </div>
+                    <div class="col-2">
+                        <input type="checkbox" name="" id="" #comodinPublico checked>
+                    </div>
+                    <div class="col-2">
+                        <input type="checkbox" name="" id="" #comodin50 checked>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-5 " style="margin-top: auto;margin-bottom: auto;">
+                        <p class="tipo-ajuste">VOLUMEN MÚSICA</p>
+                    </div>
+                    <div class="col-6">
+                        <input type='range' min="0" max="100" step="10" (change)="cambiaVolumen($event)"
+                            #rangoVolumen />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5 " style="margin-top: auto;margin-bottom: auto;">
+                        <p class="tipo-ajuste">SONIDOS EXTRAS:</p>
+                    </div>
+                    <div class="col-6">
+                        <input type="checkbox" name="" id="" #sonidosExtras checked>
+                    </div>
+
+                </div>
+
+
+                <div class="row" style="height: 30px;">
+                    <div class="col-5 ">
+                    </div>
+                    <div class="col-2">
+                        <p>15</p>
+                    </div>
+                    <div class="col-2">
+                        <p>25</p>
+
+                    </div>
+                    <div class="col-2">
+                        <p>35</p>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5 " style="margin-top: auto;margin-bottom: auto;">
+                        <p class="tipo-ajuste">TIEMPO PREGUNTAS:</p>
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo1 id="">
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo2 id="">
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo3 id="" checked>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row-ajustes2 " style="text-align: center;">
+                <p class="tipo-ajuste">COMODINES:</p>
+                <div class="row justify-content-center" style="height: 30px;text-align: center;">
+
+                    <div class="col-4">
+                        <p>Llamada</p>
+                    </div>
+                    <div class="col-4">
+                        <p>Público</p>
+
+                    </div>
+                    <div class="col-4">
+                        <p>50/50</p>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <input type="checkbox" name="" id="" #comodinLLamada>
+                    </div>
+                    <div class="col-4">
+                        <input type="checkbox" name="" id="" #comodinPublico checked>
+                    </div>
+                    <div class="col-4">
+                        <input type="checkbox" name="" id="" #comodin50 checked>
+                    </div>
+                </div>
+                <p class="tipo-ajuste mt-3">VOLUMEN MÚSICA</p>
+
+                <input type='range' min="0" max="100" step="10" (change)="cambiaVolumen($event)" #rangoVolumen />
+
+                <p class="tipo-ajuste mt-1">SONIDOS EXTRAS:</p>
+
+                <input type="checkbox" name="" id="" #sonidosExtras checked>
+
+                <p class="tipo-ajuste mt-3">TIEMPO PREGUNTAS:</p>
+
+                <div class="row justify-content-center" style="height: 30px;">
+
+                    <div class="col-2">
+                        <p>15</p>
+                    </div>
+                    <div class="col-2">
+                        <p>25</p>
+
+                    </div>
+                    <div class="col-2">
+                        <p>35</p>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row justify-content-center">
+
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo1 id="">
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo2 id="">
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="tiempoCrono" #tiempo3 id="" checked>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-3">
+
+                <div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="guardarCambios()">
+                        Guardar cambios
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mb-5">
+
+            <div class="col-sm-8 col-md-6 col-lg-6 col-xl-4 ">
+
+                <div class="fuller-button" (mouseenter)="sonarHover()" routerLink="/inicio" (click)="sonarClick()">
+                    Volver
+                    a inicio
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+</div>
+
+
+<audio autoplay loop #volumen>
+    <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
+
+</audio>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

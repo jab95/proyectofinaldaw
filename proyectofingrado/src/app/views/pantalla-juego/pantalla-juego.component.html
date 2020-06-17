@@ -91,6 +91,7 @@
 
             <div class="row texto-movil mt-2">
 
+
                 <div class=" col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="fuller-button-juego" (mouseenter)="sonarHover()" #respuesta1 #btnRespuesta
                         (click)="clickRespuesta($event)"></div>
@@ -136,7 +137,7 @@
 </div>
 
 
-<audio autoplay loop>
+<audio autoplay loop #volumen>
     <source src="../../../assets/sonidos/music2.mp3" type="audio/mpeg">
 
 </audio>

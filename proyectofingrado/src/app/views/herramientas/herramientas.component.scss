@@ -1,0 +1,114 @@
+
+  main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: "fuentegame";
+    word-spacing: 2pt;        
+
+    #tabla-ajustes{
+        margin-left: auto;
+        margin-right: auto;
+        background: #C4C7F2;
+        border-style: groove;
+        border-width: 5px;
+        padding: 3rem;
+        text-align: center;
+
+
+
+        input[type="range"] {
+          outline: 0;
+          border: 0;
+          border-radius: 500px;
+          width: 400px;
+          max-width: 100%;
+          margin: 24px 0;
+          transition: box-shadow 0.2s ease-in-out;
+          // Chrome
+          @media screen and (-webkit-min-device-pixel-ratio:0) {
+            & {
+              overflow: hidden;
+              height: 30px;
+              -webkit-appearance: none;
+              background-color: #ddd;
+            }
+            &::-webkit-slider-runnable-track {
+              -webkit-appearance: none;
+              height: 30px;
+              color: #444;
+              margin-top: -1px;
+              transition: box-shadow 0.2s ease-in-out;
+            }
+            &::-webkit-slider-thumb {
+              width: 40px;
+              -webkit-appearance: none;
+              height: 30px;
+              cursor: ew-resize;
+              background: #fff;
+              box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 40px #1597ff;
+              border-radius: 50%;
+              transition: box-shadow 0.2s ease-in-out;
+              position: relative;
+              // top: 1px;
+            }
+            &:active::-webkit-slider-thumb {
+              background: #fff;
+              box-shadow: -340px 0 0 320px #1597ff, inset 0 0 0 3px #1597ff;
+            }
+          }
+          // Firefox
+          &::-moz-range-progress {
+            background-color: #43e5f7; 
+          }
+          &::-moz-range-track {  
+            background-color: #9a905d;
+          }
+          // IE
+          &::-ms-fill-lower {
+            background-color: #43e5f7; 
+          }
+          &::-ms-fill-upper {  
+            background-color: #9a905d;
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+        
+      
+       
+    }
+    
+
+     .fuller-button {
+      color: black;
+      background: none;
+      border-radius: 0;
+      padding: 0.8em 1em;
+      letter-spacing: 0.25em;
+      transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
+      box-shadow: inset 0 0 1em #3C4473, 0 0 1em #3C4473;
+      border: #3C4473 solid 2px;
+      margin-top: 1em;
+   
+      &:hover {
+        background-color: rgb(198, 216, 239);//#A2F2EA;
+        box-shadow: inset 0 0 0 #3C4473, 0 0 1.5em #3C4473;
+        cursor: pointer;
+      }
+    }
+
+    
+
+  }
+
+ 

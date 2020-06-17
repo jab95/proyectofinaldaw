@@ -5,21 +5,41 @@ import { MatDialogRef } from "@angular/material";
 import { AuthserviceService } from '../../services/auth/authservice.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HostListener } from '@angular/core';
 
+
+interface Foo {
+  [key: string]: boolean;
+}
 @Component({
   selector: 'app-form-login',
   templateUrl: './form-login.component.html',
   styleUrls: ['../../app.component.scss', './form-login.component.scss']
 })
 export class FormLoginComponent implements OnInit, AfterViewInit, OnDestroy {
-  ngAfterViewInit(): void {
-    this.hover.nativeElement.volume = "0.2";
-  }
+
 
   @ViewChild('click', { static: false }) click: ElementRef;
   @ViewChild('hover', { static: false }) hover: ElementRef;
   loginForm: FormGroup;
+  keysPressed: Foo = {};
 
+
+
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.keysPressed[event.key] = true;
+    console.log(event.key)
+    if (this.keysPressed['Alt'] && event.key == 'Enter') {
+      this.login(this.loginForm.value)
+    }
+  }
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent2(event: KeyboardEvent) {
+    delete this.keysPressed[event.key];
+
+  }
 
   constructor(
     private toastr: ToastrService,
@@ -35,6 +55,18 @@ export class FormLoginComponent implements OnInit, AfterViewInit, OnDestroy {
     });
   }
 
+
+  ngAfterViewInit(): void {
+    //ESTABLECE SI SE ESCUCHA EL SONIDO A DAR CLICKS O PASAR POR ENCIMA DE BOTONES
+    if (this.dataservice.sonidosExtras) {
+      this.hover.nativeElement.volume = 0.2;
+      this.click.nativeElement.volume = 1
+    }
+    else {
+      this.hover.nativeElement.volume = 0;
+      this.click.nativeElement.volume = 0
+    }
+  }
   ngOnDestroy() {
   }
 
@@ -78,6 +110,9 @@ export class FormLoginComponent implements OnInit, AfterViewInit, OnDestroy {
   sonarHover() {
     this.hover.nativeElement.play();
 
+  }
+
+  keyPress(event) {
   }
 
 }

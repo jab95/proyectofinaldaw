@@ -43,9 +43,9 @@ import { ColocaSeguroComponent } from './components/coloca-seguro/coloca-seguro.
 import { AcertadaFalladaComponent } from './components/acertada-fallada/acertada-fallada.component';
 import { AddRankingComponent } from './components/add-ranking/add-ranking.component';
 import { CargandoComponent } from './components/cargando/cargando.component';
+import { ModificaPreguntaComponent } from './components/modifica-pregunta/modifica-pregunta.component';
 
-
-
+//I keep the new line
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +67,8 @@ import { CargandoComponent } from './components/cargando/cargando.component';
     ColocaSeguroComponent,
     AcertadaFalladaComponent,
     AddRankingComponent,
-    CargandoComponent
+    CargandoComponent,
+    ModificaPreguntaComponent
   ],
   imports: [
     BrowserModule,
@@ -80,16 +81,19 @@ import { CargandoComponent } from './components/cargando/cargando.component';
     MatFormFieldModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-    AngularFireStorageModule,// imports firebase/storage only needed for storage features
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
     ToastrModule.forRoot(),
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [{ provide: FirestoreSettingsToken, useValue: {} }, PreguntasService],
   bootstrap: [AppComponent],
+
+  //PARA LOS COMPONENTES QUE SE ABREN EN PAGINA MODAL
   entryComponents: [FormLoginComponent, FormRegistroComponent, Comodin50Component,
     ComodinLLamadaComponent, ComodinPublicoComponent, MuestraSaldoComponent,
-    ColocaSeguroComponent, AcertadaFalladaComponent, AddRankingComponent, CargandoComponent]
+    ColocaSeguroComponent, AcertadaFalladaComponent, AddRankingComponent, CargandoComponent, ModificaPreguntaComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

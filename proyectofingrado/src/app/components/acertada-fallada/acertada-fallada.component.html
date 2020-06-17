@@ -1,14 +1,18 @@
 <main>
     <div id="cab">
-        <h3 class="text-center" mat-dialog-title #acertadafallida></h3>
+        <h3 class="text-center" #acertadafallida></h3>
     </div>
+
+    <!-- SI NO SE HA ACERTADO LA PREGUNTA, SE PONEN LOS ELEMENTOS DE GUARDADO DE RANKING -->
     <div *ngIf="dataservice.acertada == false" class="text-center mt-3" mat-dialog-content>
-        <p style="font-weight: bold;" id="saldo-acumulado">TU SALDO ACUMULADO ES DE {{saldoAcumulado}}€</p>
+        <p style="font-weight: bold;" id="saldo-acumulado">TU SALDO ACUMULADO ES DE
+            {{saldoAcumulado  | number:'':'es'}}€</p>
         <p style="font-weight: bold;" id="saldo-acumulado">¿Desea guardar el resultado?</p>
         <div class="fuller-button" (mouseenter)="sonarHover()" (click)="guardarRanking()">
             Guardar ranking
         </div>
     </div>
+    <!-- SI HAS LLEGADO AL MILLON, SE COLOCAN LOS SIGUIENTES ELEMENTOS -->
     <div *ngIf="dataservice.llegadoAMillon" class="text-center mt-3" mat-dialog-content>
         <p style="font-weight: bold;" id="saldo-acumulado">Has conseguido 1 millon de €</p>
         <p style="font-weight: bold;" id="saldo-acumulado">¿Desea guardar el resultado?</p>

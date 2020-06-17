@@ -2,30 +2,168 @@
 
     <main>
 
-        <h1>{{headMessage}}</h1>
+        <h1>ADMINISTRACIÓN</h1>
 
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Titulo de pregunta</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let pregunta of preguntas; let i = index" (click)="setClickedRow(i)"
-                    [class.active]="i == selectedRow">
-                    <td>{{pregunta.pregunta}}</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row mb-3">
+            <div class="col-5"></div>
+            <div class="col-5"></div>
+            <div class="col">
+                <div class="fuller-button btn-salir" routerLink="/inicio" (mouseenter)="sonarHover()"
+                    (click)="sonarClick()">
+                    <i class="fas fa-sign-out-alt fa-2x"></i>
 
-        <div class="well well-lg">
-            Selected Row : <strong>{{selectedRow}}</strong>
+                </div>
+
+            </div>
         </div>
+
+        <div id="tabla-preguntas" class="texto-administracion tamaño-tabla-preguntas">
+            <table class="table table-hover">
+
+                <tbody>
+                    <!-- SE COLOREA EL FONDO DE LA FILA, SI EL TITULO DE LA PREGUNTA SELECIONADA  -->
+                    <!-- ES IGUAL AL VALOR DE LA VARIABLE PREGUNTA SELECCIONADA-->
+                    <tr *ngFor="let pregunta of preguntas; let i = index" (click)="setClickedRow(pregunta)"
+                        [class.active]="pregunta.pregunta==preguntaSeleccionada">
+                        <td>{{pregunta.pregunta}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+        <div class="row justify-content-center mt-2 row-administracion1">
+
+
+            <div class="col d-flex align-items-center">
+                <input class="w-100 " #inputBusqueda placeholder="Buscar pregunta" type="text"
+                    (input)="onSearchChange($event.target.value)">
+            </div>
+
+            <div class=" d-flex align-items-center col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 mr-5">
+                <select name="" id="" #combo (change)="onChange($event.target.value)">
+                    <option value="todas">Todas las preguntas</option>
+                    <option value="uno">Preguntas del Nivel 1</option>
+                    <option value="dos">Preguntas del Nivel 2</option>
+                    <option value="tres">Preguntas del Nivel 3</option>
+                </select>
+            </div>
+
+            <!-- <div class=" col-2 mr-4 d-flex align-items-center">
+               
+            </div> -->
+            <div class=" col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 ">
+                <div (mouseenter)="sonarHover()" (click)="nuevaPregunta()" class="fuller-button">
+                    Añadir</div>
+
+
+            </div>
+
+            <div class=" col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 ">
+                <div (mouseenter)="sonarHover()" (click)="modificarPregunta()" class="fuller-button">
+                    Modificar</div>
+
+
+            </div>
+
+            <div class=" col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 ">
+                <div (mouseenter)="sonarHover()" (click)="eliminarPregunta()" class="fuller-button">
+                    Eliminar</div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row  mt-2 mb-2 row-administracion2">
+
+            <div class="row ml-1 mt-2">
+
+                <div class="d-flex col-5 col-sm-7 col-md-8 col-lg-8 col-xl-8 ">
+                    <input class="w-100" #inputBusqueda placeholder="Buscar pregunta" type="text"
+                        (input)="onSearchChange($event.target.value)">
+                </div>
+
+                <div class="d-flex col-5 col-sm-4 col-md-4 col-lg-8 col-xl-2 ">
+                    <select name="" id="" (change)="onChange($event.target.value)">
+                        <option value="todas">Todas las preguntas</option>
+                        <option value="uno">Preguntas del Nivel 1</option>
+                        <option value="dos">Preguntas del Nivel 2</option>
+                        <option value="tres">Preguntas del Nivel 3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row justify-content-center mt-2">
+                <div class=" col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 ">
+                    <div (mouseenter)="sonarHover()" (click)="nuevaPregunta()" class="fuller-button">
+                        Añadir</div>
+
+
+                </div>
+
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
+                    <div (mouseenter)="sonarHover()" (click)="modificarPregunta()" class="fuller-button">
+                        Modificar</div>
+                </div>
+
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div (mouseenter)="sonarHover()" (click)="eliminarPregunta()" class="fuller-button">
+                        Eliminar</div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row  mt-2 mb-2 row-administracion3">
+
+            <div class="row justify-content-center mt-2">
+                <div class=" col-11 ">
+                    <input class="w-100" #inputBusqueda placeholder="Buscar pregunta" type="text"
+                        (input)="onSearchChange($event.target.value)" style="text-align: center;">
+                </div>
+            </div>
+
+            <select name="" id="" class="text-center" (change)="onChange($event.target.value)">
+                <option value="todas">Todas las preguntas</option>
+                <option value="uno">Preguntas del Nivel 1</option>
+                <option value="dos">Preguntas del Nivel 2</option>
+                <option value="tres">Preguntas del Nivel 3</option>
+            </select>
+
+            <div class="row justify-content-center mt-2">
+                <div class=" col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 ">
+                    <div (mouseenter)="sonarHover()" (click)="nuevaPregunta()" class="fuller-button">
+                        Añadir</div>
+
+
+                </div>
+
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 ">
+                    <div (mouseenter)="sonarHover()" (click)="modificarPregunta()" class="fuller-button">
+                        Modificar</div>
+                </div>
+
+                <div class=" col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                    <div (mouseenter)="sonarHover()" (click)="eliminarPregunta()" class="fuller-button">
+                        Eliminar</div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
     </main>
 </div>
 
 
-<audio autoplay loop>
+<audio autoplay loop #volumen>
     <source src="../../../assets/sonidos/music1.mp3" type="audio/mpeg">
 
 </audio>

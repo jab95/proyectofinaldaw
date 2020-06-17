@@ -5,16 +5,17 @@ import { MatDialogRef } from "@angular/material";
 import { AuthserviceService } from '../../services/auth/authservice.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormControl, FormGroup } from '@angular/forms';
+import { HostListener } from '@angular/core';
 
+interface Foo {
+  [key: string]: boolean;
+}
 @Component({
   selector: 'app-form-registro',
   templateUrl: './form-registro.component.html',
   styleUrls: ['../../app.component.scss', './form-registro.component.scss']
 })
 export class FormRegistroComponent implements OnInit, AfterViewInit {
-  ngAfterViewInit(): void {
-    this.hover.nativeElement.volume = "0.2";
-  }
 
 
   @ViewChild('click', { static: false }) click: ElementRef;
@@ -24,7 +25,23 @@ export class FormRegistroComponent implements OnInit, AfterViewInit {
   password: string = "";
 
   registerForm: FormGroup;
+  keysPressed: Foo = {};
 
+
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.keysPressed[event.key] = true;
+    console.log(event.key)
+    if (this.keysPressed['Alt'] && event.key == 'Enter') {
+      this.registro(this.registerForm.value)
+    }
+  }
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent2(event: KeyboardEvent) {
+    delete this.keysPressed[event.key];
+
+  }
 
 
   constructor(private toastr: ToastrService,
@@ -41,6 +58,18 @@ export class FormRegistroComponent implements OnInit, AfterViewInit {
       password: new FormControl(''),
       email: new FormControl('')
     });
+  }
+
+  ngAfterViewInit(): void {
+    //ESTABLECE SI SE ESCUCHA EL SONIDO A DAR CLICKS O PASAR POR ENCIMA DE BOTONES
+    if (this.dataservice.sonidosExtras) {
+      this.hover.nativeElement.volume = 0.2;
+      this.click.nativeElement.volume = 1
+    }
+    else {
+      this.hover.nativeElement.volume = 0;
+      this.click.nativeElement.volume = 0
+    }
   }
 
 
@@ -99,5 +128,8 @@ export class FormRegistroComponent implements OnInit, AfterViewInit {
     this.hover.nativeElement.play();
 
   }
+
+
+
 
 }

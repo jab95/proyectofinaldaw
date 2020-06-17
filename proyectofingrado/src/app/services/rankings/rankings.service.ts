@@ -15,6 +15,7 @@ export class RankingsService {
   }
 
 
+  // CREA EL RAKING CUANDO SE GUARDA AL PERDER LA PARTIDA
   createRanking(data) {
     return new Promise<any>((resolve, reject) => {
       this.firestore
@@ -35,6 +36,7 @@ export class RankingsService {
     return this.firestore.collection(this.dbPath).doc(key).delete();
   }
 
+  // SE OBTIENEN TODOS LOS RANKINGS
   getRankings(): AngularFirestoreCollection<Ranking> {
     return this.firestore.collection(this.dbPath)
   }

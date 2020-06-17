@@ -1,0 +1,121 @@
+<main>
+    <div id="cab">
+        <h3 class="text-center">{{tituloVentana}}</h3>
+    </div>
+    <div mat-dialog-content>
+        <div class="container texto-ajustes" style="text-align: center;">
+
+
+            <form [formGroup]="nuevaPregunta" class="form-horizontal">
+                <div class="form-group">
+                    <p #tagtitulo>Título </p>
+                    <input type="text" #titulo formControlName="pregunta" name="usuario" class="mt-1 respuestas " id=""
+                        placeholder="Escriba la pregunta" style="width: 180px;">
+                </div>
+                <p> Dificultad
+                </p>
+                <div class="form-group text-center">
+                    <input type="radio" #dificultad1 name="dificultad" value="1" id="dificultad1">
+                    <label for="uno" style="margin-right: 20px; font-size: 1.5em;"> 1</label>
+                    <input type="radio" #dificultad2 name="dificultad" value="2" id="dificultad2">
+                    <label for="dos" style="margin-right: 20px; font-size: 1.5em;"> 2</label>
+                    <input type="radio" #dificultad3 name="dificultad" value="3" id="dificultad3">
+                    <label for="tres" style="margin-right: 20px; font-size: 1.5em;"> 3</label>
+
+                </div>
+                <p> Respuestas
+                </p>
+
+
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-1 ">
+                            <label #tagrespuesta1 style="font-weight: bold;">1</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" #respuesta1 formControlName="respuesta1" name="usuario"
+                                class="mt-1 respuestas " id="" placeholder="Escriba la respuesta 1"
+                                style="width: 100%;">
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-1 ">
+                            <label #tagrespuesta2 style="font-weight: bold;">2</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" #respuesta2 formControlName="respuesta2" name="usuario"
+                                class="mt-1 respuestas " id="" placeholder="Escriba la respuesta 2"
+                                style="width: 100%;">
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-1 ">
+                            <label #tagrespuesta3 style="font-weight: bold;">3</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" #respuesta3 formControlName="respuesta3" name="usuario"
+                                class="mt-1 respuestas " id="" placeholder="Escriba la respuesta 3"
+                                style="width: 100%;">
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="row">
+
+                        <div class="col-1 ">
+                            <label #tagrespuesta4 style="font-weight: bold;">4</label>
+                        </div>
+                        <div class="col-10">
+                            <input type="text" #respuesta4 formControlName="respuesta4" name="usuario"
+                                class="mt-1 respuestas " id="" placeholder="Escriba la respuesta 4"
+                                style="width: 100%;">
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <p> Respuesta correcta
+                </p>
+                <div class="form-group text-center">
+                    <input type="radio" #respuestaCorrecta1 name="respuestaCorrecta" value="0" id="uno">
+                    <label for="uno" style="margin-right: 10px; font-size: 1.5em;"> 1</label>
+                    <input type="radio" #respuestaCorrecta2 name="respuestaCorrecta" value="1" id="dos">
+                    <label for="dos" style="margin-right: 10px; font-size: 1.5em;"> 2</label>
+                    <input type="radio" #respuestaCorrecta3 name="respuestaCorrecta" value="2" id="tres">
+                    <label for="tres" style="margin-right: 10px; font-size: 1.5em;"> 3</label>
+                    <input type="radio" #respuestaCorrecta4 name="respuestaCorrecta" value="3" id="cuatro">
+                    <label for="cuatro" style="margin-right: 10px; font-size: 1.5em;"> 4</label>
+
+                </div>
+                <div class="form-group">
+                    <div class="fuller-button" (mouseenter)="sonarHover()" (click)="addPregunta(nuevaPregunta.value)">
+                        {{btnVentana}}
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</main>
+
+<audio #click src="../../../assets/sonidos/click.mp3" autostart="false"></audio>
+<audio #hover src="../../../assets/sonidos/hover.mp3" volume="0.0" autostart="false"></audio>

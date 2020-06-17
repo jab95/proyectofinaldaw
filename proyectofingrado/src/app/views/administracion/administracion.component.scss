@@ -6,17 +6,23 @@
     font-family: "fuentegame";
     word-spacing: 2pt;        
 
-    #tabla-acercade{
+    #tabla-preguntas{
         margin-left: auto;
         margin-right: auto;
         background: #C4C7F2;
         border-style: groove;
         border-width: 5px;
-        height:72rem;
+        overflow-y: scroll;
         width: 100%;
         padding: 3rem;
         text-align: center;
-      
+        cursor: pointer;
+
+        .table tr.active td {
+          background-color:#3C4473 !important;
+          color: white;
+
+        }
        
     }
     
@@ -38,6 +44,11 @@
         cursor: pointer;
       }
     }
+
+    .btn-salir{
+      padding: 0.4em 0.4em;
+
+}
 
     
 

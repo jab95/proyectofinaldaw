@@ -1,9 +1,11 @@
-import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, ElementRef, OnDestroy, HostListener } from '@angular/core';
 import { MatDialogRef } from "@angular/material";
 import { DataService } from 'src/app/services/data/data.service';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
-
+interface Foo {
+  [key: string]: boolean;
+}
 @Component({
   selector: 'app-muestra-saldo',
   templateUrl: './muestra-saldo.component.html',
@@ -28,6 +30,22 @@ export class MuestraSaldoComponent implements OnInit, AfterViewInit {
   @ViewChild('pregunta11', { static: false }) pregunta11: ElementRef;
   @ViewChild('pregunta12', { static: false }) pregunta12: ElementRef;
   preguntas: ElementRef[] = []
+  keysPressed: Foo = {};
+  guardarAbierto: boolean = false;
+
+  @HostListener('window:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    this.keysPressed[event.key] = true;
+    if (this.keysPressed['Alt'] && event.key == 'Enter') {
+      this.aceptarComodin();
+    }
+
+  }
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent2(event: KeyboardEvent) {
+    delete this.keysPressed[event.key];
+
+  }
 
   constructor(
     private dialogRef: MatDialogRef<MuestraSaldoComponent>,
@@ -38,14 +56,24 @@ export class MuestraSaldoComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    registerLocaleData(es);
+
+    // //AÑADE LOS PUNTOS A LOS NUMEROS DEL HTML
+    // registerLocaleData(es);
 
 
   }
 
   ngAfterViewInit(): void {
-    this.hover.nativeElement.volume = "0.2";
-
+    //ESTABLECE SI SE ESCUCHA EL SONIDO A DAR CLICKS O PASAR POR ENCIMA DE BOTONES
+    if (this.dataservice.sonidosExtras) {
+      this.hover.nativeElement.volume = 0.2;
+      this.click.nativeElement.volume = 1
+    }
+    else {
+      this.hover.nativeElement.volume = 0;
+      this.click.nativeElement.volume = 0
+    }
+    // SE ALMACENAN LOS VALORES DEL SALDO DE EL COMPONENTE
     this.preguntas.push(this.pregunta1)
     this.preguntas.push(this.pregunta2)
     this.preguntas.push(this.pregunta3)
@@ -59,21 +87,28 @@ export class MuestraSaldoComponent implements OnInit, AfterViewInit {
     this.preguntas.push(this.pregunta11)
     this.preguntas.push(this.pregunta12)
 
+    //SI YA SE HA ESTABLECIDO EL SEGUNDO SEGURO
     if (this.dataservice.seguroNuevo != 0) {
 
+      // SE ESCOGE EL SALDO/PREGUNTA DEL HTML EN LA CUAL SE A ESTABLECIDO EL SEGUNDO SEGURO
       for (let index = 0; index < this.preguntas.length; index++) {
+
+        // SE OBTIENE EL INDICE DEL SPAN DEL PARRAFO DEL SEGUNDO SEGURO,
+        // SE COLOREA SU PARRAFO Y SE OBTIENE EL SALDO 
         if (this.preguntas[index].nativeElement.children[0].id == "pregunta" + this.dataservice.seguroNuevo) {
           this.preguntas[index].nativeElement.style.background = "rgb(91, 98, 141)"
-          this.dataservice.dineroSegundoSeguro = parseInt(this.preguntas[this.dataservice.seguroNuevo - 1].nativeElement.children[0].innerHTML)
+          this.dataservice.dineroSegundoSeguro = parseInt((this.preguntas[this.dataservice.seguroNuevo - 1].nativeElement.children[0].innerHTML).replace(".", "").replace(".", ""))
         }
       }
     }
 
+    // SE OBTIENE EL INDICE DEL SPAN DEL PARRAFO DE LA PREGUTA ACTUAL
+    // SE COLOREA SU PARRAFO Y SE OBTIENE EL SALDO 
     for (let index = 0; index < this.preguntas.length; index++) {
 
       if (this.preguntas[index].nativeElement.children[0].id == "pregunta" + (this.dataservice.contadorPreguntaActual + 1)) {
         this.preguntas[index].nativeElement.style.background = "rgb(221, 221, 221)"
-        this.dataservice.dineroAcumulado = parseInt(this.preguntas[index].nativeElement.children[0].innerHTML)
+        this.dataservice.dineroAcumulado = parseInt((this.preguntas[index].nativeElement.children[0].innerHTML).replace(".", "").replace(".", ""))
       }
     }
   }

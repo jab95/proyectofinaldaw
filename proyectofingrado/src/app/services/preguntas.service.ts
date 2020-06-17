@@ -17,11 +17,16 @@ export class PreguntasService {
     this.preguntas = db.collection(this.dbPath);
   }
 
-  createCustomer(customer: Pregunta): void {
-    this.preguntas.add({ ...customer });
+
+
+
+  addPregunta(data) {
+
+    this.db.collection(this.dbPath).add(data)
+
   }
 
-  updateCustomer(key: string, value: any): Promise<void> {
+  updatePregunta(key: string, value: any): Promise<void> {
     return this.preguntas.doc(key).update(value);
   }
 
@@ -29,14 +34,23 @@ export class PreguntasService {
     return this.preguntas.doc(key).delete();
   }
 
+  // SE OBTIENEN TODOS LAS PREGUNTAS
   getPreguntas(): AngularFirestoreCollection<Pregunta> {
     return this.preguntas;
   }
 
+  // SE OBTIENEN TODAS LAS PREGUNTAS DEL NIVEL INDICADO
   getPreguntasNivel(nivel: number): AngularFirestoreCollection<Pregunta> {
     return this.db.collection(this.dbPath, ref => ref.where('dificultad', '==', nivel));
 
   }
+
+  // getPreguntasNombre(nombre: string): AngularFirestoreCollection<Pregunta> {
+  //   return this.db.collection(this.dbPath, ref => ref.orderBy("pregunta").(nombre)
+  //     .endAt(nombre + "\uf8ff"));
+
+  // }
+
   deleteAll() {
     this.preguntas.get().subscribe(
       querySnapshot => {
